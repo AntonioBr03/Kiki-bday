@@ -130,28 +130,34 @@ function App() {
       </motion.div>
 
       {/* Fun Button Section */}
-      <div
-        id="move-container"
-        className="relative m-5 mt-10 h-[300px] bg-pink-300 rounded-lg shadow-md overflow-hidden flex items-center justify-center"
-      >
-        {/* Yes Button (moves) */}
-        <motion.button
-          onClick={moveButton}
-          animate={{ top: position.top, left: position.left }}
-          transition={{ type: "spring", stiffness: 100 }}
-          className="absolute bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full shadow-lg"
-          style={{ top: position.top, left: position.left }}
-        >
-          Yes 😡
-        </motion.button>
 
-        {/* No Button (stays) */}
-        <button
-          onClick={() => setShowPopup(true)}
-          className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-lg"
+      <div className="text-center mt-15">
+        <p className="text-4xl font-bold opacity-80">
+          Are you still mad at me????
+        </p>
+        <div
+          id="move-container"
+          className="relative m-5 mt-10 h-[300px] rounded-lg shadow-md bg-pink-400 overflow-hidden flex items-center justify-center"
         >
-          No ❤️
-        </button>
+          {/* Yes Button (moves) */}
+          <motion.button
+            onClick={moveButton}
+            animate={{ top: position.top, left: position.left }}
+            transition={{ type: "spring", stiffness: 100 }}
+            className="absolute bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full shadow-lg"
+            style={{ top: position.top, left: position.left }}
+          >
+            Yes 😡
+          </motion.button>
+
+          {/* No Button (stays) */}
+          <button
+            onClick={() => setShowPopup(true)}
+            className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-lg"
+          >
+            No ❤️
+          </button>
+        </div>
       </div>
 
       {/* Popup */}
